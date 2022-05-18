@@ -1,0 +1,24 @@
+
+pc wallet
+	pubkey : GHZ471uNz2xoQoJobKHGmPdH7oVu4YPVKzcarNzYmLNY
+	private key : 5itceqWBNbS7PjfSAXRACfBpsZLEMywspb1LWegCn7cJLWHCnLJqeyeHXmHTdHvRfzXoVKhadaKtqhTwuBygZB2k
+
+-----------------------------------------------------------------------
+
+mint token pubkey : UjBTkaXKHnLRFWHM2RCTdpcc3tdAJyGkmCgyiuPM2U1
+
+-----------------------------------------------------------------------
+ata_pubkey : BrwyFep4cfiRdkyuH732jQWrdRVnCz1povyF8pR7DE7g
+
+
+Wallet1_pubkey : BS4HoLGT5BSHGA8aDFE7Z7CovcMvBn8c2Uffmqb8MEKx
+ATA1_pubkey : 9S9xbALEs1MLYH5BUreBSwLwQjr81wGjRkWw6HqtUoQQ
+
+Wallet2_pubkey : 2kaycxFPrA9vYFv8P9zt6Q3avp6TLgvjCwCoKBPwynnQ
+ATA2_pubkey : 4DUtDEyNK8KX1Jjy5DfLesnKsiW613XHZES1dnJ25ZWS
+
+Wallet3_pubkey : 9Z75QFdFzg4J6MFyQbtvGyAwXjGkbwMemBcF4sPQqxQv
+ATA3_pubkey : FuEdd9DKcgeTC5bnbogVjVwondsvQ8admwpnkkCtNhhx
+
+Wallet4_pubkey : CwFzaQyE4558uJAcKryXXFgtd4sQ89uHQVzfP545uih8
+ATA4_pubkey : 6AMRYv2XiFeYtCzXPdmH2PidPfNrRoh9VVSu2GAHC2ns

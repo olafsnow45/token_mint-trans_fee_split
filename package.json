@@ -1,0 +1,21 @@
+{
+  "name": "token-fee-split",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/spl-token": "^0.2.0",
+    "@solana/web3.js": "^1.42.0",
+    "bn.js": "^5.2.0",
+    "buffer-layout": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0"
+  }
+}
