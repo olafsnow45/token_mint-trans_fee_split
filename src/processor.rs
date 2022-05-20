@@ -2,21 +2,15 @@ use solana_program::{
     account_info::{next_account_info, AccountInfo },
     entrypoint::ProgramResult,
     msg,
-    program::{invoke, invoke_signed},
-    program_error::ProgramError,
-    pubkey::{Pubkey, self},
-    sysvar::{rent::Rent, Sysvar},
-    system_instruction
+    program::{invoke},
+    pubkey::{Pubkey},
 };
 
 use spl_token::{
-    id, instruction,
+    instruction,
 };
 
-use spl_associated_token_account::{get_associated_token_address, tools::account::create_pda_account};
-
 use crate::{error::SplitError, instruction::SplitInstruction};
-use arrayref::{array_mut_ref, array_ref};
 
 pub struct Processor;
 impl Processor {
@@ -44,13 +38,17 @@ impl Processor {
     fn process_mint_token(
         accounts: &[AccountInfo],
         amount: u64,
-        program_id: &Pubkey,
+        _program_id: &Pubkey,
     ) -> ProgramResult {
 
-        let wallet1_pubkey = "BS4HoLGT5BSHGA8aDFE7Z7CovcMvBn8c2Uffmqb8MEKx";
-        let wallet2_pubkey = "2kaycxFPrA9vYFv8P9zt6Q3avp6TLgvjCwCoKBPwynnQ";
-        let wallet3_pubkey = "9Z75QFdFzg4J6MFyQbtvGyAwXjGkbwMemBcF4sPQqxQv";
-        let wallet4_pubkey = "CwFzaQyE4558uJAcKryXXFgtd4sQ89uHQVzfP545uih8";
+        //--- Public    50%
+        let wallet1_pubkey = "AABNCe2Qe7ot33jf2kAfhHJ2tgzLg4RT6DfcxYz82GSq";
+        //--- Founders  20%
+        let wallet2_pubkey = "EAHu7zYNsK88wp14cwhpUKd2bMrt8qhcGkpVzks5FL2r";
+        //--- Reserve   20%
+        let wallet3_pubkey = "AVgQpyz4YmnhXH3KnzSBSeaT2w7dUq1aJFumstCYKdMy";
+        //--- Team      10%
+        let wallet4_pubkey = "FjJVM5knq46rr3MxSsDFNARKp6YDSqhS1DcKm6APuPyW";
 
         let amount_mint = amount;
         msg!("amount_mint : {}", amount_mint);
@@ -222,7 +220,7 @@ impl Processor {
         fee3: u8,
         fee4: u8,
         fee5: u8,
-        program_id: &Pubkey,
+        _program_id: &Pubkey,
     ) -> ProgramResult {
 
         let amount_1 = ((amount as f64) * (fee1 as f64) / 100.0) as u64;

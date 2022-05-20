@@ -17,29 +17,35 @@ import {
 } from "./utils";
 
 const mintToken = async () => {
-    
-  const connection = new Connection("http://localhost:8899", "confirmed");
-  // const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 
   const pcKeypair = getKeypair("id");
-  console.log("Requesting SOL for Bob...");
-  await connection.requestAirdrop(pcKeypair.publicKey, LAMPORTS_PER_SOL * 100);
-  const ata_pubkey = new PublicKey("GKpwQ5rxcbUTjmxvN1PEsK49eEc9STYCb7ZkU9MC6aHF");
+
+  // const connection = new Connection("http://localhost:8899", "confirmed");
+  // console.log("Requesting SOL for Bob...");
+  // await connection.requestAirdrop(pcKeypair.publicKey, LAMPORTS_PER_SOL * 100);
+  const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 
   const splitProgramId = getProgramId();
-  const mint_pubkey = new PublicKey("5y6MtEwF2NQxxgxd48xP6kMmrvQXfDx5gCr8fQmsa5d4");
+  const mint_pubkey = new PublicKey("4yx2gD7heLLTHGLN4CGPCaGYsCRfMnadcq8nLm1aWXDk");
 
-  const wallet1_pubkey = getPublicKey("wallet1");
-  const ata1_pubkey = new PublicKey("7e3MpJsu8gg7GPVKfgMSxm9r1jeoiGBcb9UqMWHwFn2n");
+  //----- Mint Auth ATA
+  const ata_pubkey = new PublicKey("7vC7aiFev4CbR7tXdF8XoAJVmsKJJkrRF8XQLv45v9hs");
 
-  const wallet2_pubkey = getPublicKey("wallet2");
-  const ata2_pubkey = new PublicKey("DSNZ4b6HaA5U3tRucu2er4ACf5kgoPYE7JVuYs7yC6Xu");
+  //----- Public Wallet   50%
+  const wallet1_pubkey = new PublicKey("AABNCe2Qe7ot33jf2kAfhHJ2tgzLg4RT6DfcxYz82GSq");
+  const ata1_pubkey = new PublicKey("AKLskMXxyG5XLudrVuJR8rdQLNqbbFFbDwsMBXWbT5DY");
 
-  const wallet3_pubkey = getPublicKey("wallet3");
-  const ata3_pubkey = new PublicKey("65LeMTf2Pb1Ub8bpLJnqFBUjZoE12UypH7XsNt7HeWy4");
+  //----- Founders Wallet 20%
+  const wallet2_pubkey = new PublicKey("EAHu7zYNsK88wp14cwhpUKd2bMrt8qhcGkpVzks5FL2r");
+  const ata2_pubkey = new PublicKey("CdLbsLMLwWM92eWzQp6AFR9fCn6CzygMskeA4BzCo2RB");
 
-  const wallet4_pubkey = getPublicKey("wallet4");
-  const ata4_pubkey = new PublicKey("31GomYLLkwyfK9LwE92N3R8FvKoCBGr24b2n4DorBUc3");
+  //----- Reserve Wallet  20%
+  const wallet3_pubkey = new PublicKey("AVgQpyz4YmnhXH3KnzSBSeaT2w7dUq1aJFumstCYKdMy");
+  const ata3_pubkey = new PublicKey("CtSUc6nTFsgLQsNzyJkwczJCzkZjYtTRLRKEEbeJVu5P");
+
+  //----- Team Wallet     10%
+  const wallet4_pubkey = new PublicKey("FjJVM5knq46rr3MxSsDFNARKp6YDSqhS1DcKm6APuPyW");
+  const ata4_pubkey = new PublicKey("7Tvwrh1P7fgfJTnx9TngWwrwBXadRspmhy63L8ZxRHas");
  
 
   const mintTokenIx = new TransactionInstruction({

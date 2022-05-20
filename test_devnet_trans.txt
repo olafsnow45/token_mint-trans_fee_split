@@ -1,0 +1,27 @@
+
+mint token : 4yx2gD7heLLTHGLN4CGPCaGYsCRfMnadcq8nLm1aWXDk
+
+---------------------------------------------------------------------------------------
+
+src wallet_pubkey (Payer): GHZ471uNz2xoQoJobKHGmPdH7oVu4YPVKzcarNzYmLNY
+ATA_src_pubkey : ata1 : 7vC7aiFev4CbR7tXdF8XoAJVmsKJJkrRF8XQLv45v9hs
+
+dest wallet_pubkey : wallet4 : FjJVM5knq46rr3MxSsDFNARKp6YDSqhS1DcKm6APuPyW
+ATA_dest_pubkey : ata4 : 7Tvwrh1P7fgfJTnx9TngWwrwBXadRspmhy63L8ZxRHas
+
+---------------------------------------------------------------------------------------
+
+fee Wallet1_pubkey(Marketing) : DsjHA9mQZUwFNMS1KjEGEyaTPtS7mZDpNXoRmzZTrPkh
+fee_ATA1_pubkey : 3ZgyamrcUybDhvuLurtwqnkFxtuXxKAEVKAeWHNfvbz1
+
+fee Wallet2_pubkey(Development) : CPS5BfkuxJ7o8gvDKoDEchp7AdzG12iR6RcmANTPUnWT
+fee_ATA2_pubkey : 7fmKSZ3WFJ1HsNbVRPwRezZmDQggnpmPUArsSngbcPk3
+
+fee Wallet3_pubkey(Liquidity) : GTg9tPURg71p3kXJam9xbuhTF1smwcrhWcGFRdkPHsen
+fee_ATA3_pubkey : GfUcEZssAT9ePfJRTkJjx9peVuduCqWW4uYheQKK9RQo
+
+fee Wallet4_pubkey(Buy) : DuzvPc9Prm5NANmqPtT4pcRCixpsF6QuiAbA2DcBCdL6
+fee_ATA4_pubkey : 8JRBBtvHBTZZ3F4KbyvA8ztyhHnJondjjhcaaHbqGj5y
+
+fee Wallet5_pubkey(Charity) : 6j6xMgrPWoaxwUnNTSKX2mkYvgU1WQq6LFYULvXaAutx
+fee_ATA5_pubkey : 41zm3ka3y5HVj3bY2W8ZHhn4U7cSxC53ihuXUY6hotsn

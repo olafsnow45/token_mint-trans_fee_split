@@ -17,39 +17,45 @@ import {
 
 const transToken = async () => {
     
-  const connection = new Connection("http://localhost:8899", "confirmed");
-  // const connection = new Connection("https://api.devnet.solana.com", "confirmed");
-
   const splitProgramId = getProgramId();
-  const mint_pubkey = new PublicKey("5y6MtEwF2NQxxgxd48xP6kMmrvQXfDx5gCr8fQmsa5d4");
+  const mint_pubkey = new PublicKey("4yx2gD7heLLTHGLN4CGPCaGYsCRfMnadcq8nLm1aWXDk");
 
 
-  const src_keyPair = getKeypair("wallet1");
-  const ata1_pubkey = new PublicKey("7e3MpJsu8gg7GPVKfgMSxm9r1jeoiGBcb9UqMWHwFn2n");
+  //-- Mint Auth & Payer
+  const src_keyPair = getKeypair("id");
+  const ata1_pubkey = new PublicKey("7vC7aiFev4CbR7tXdF8XoAJVmsKJJkrRF8XQLv45v9hs");
 
-  console.log("Requesting SOL for Source Wallet...");
-  await connection.requestAirdrop(src_keyPair.publicKey, LAMPORTS_PER_SOL * 100);
+  // const connection = new Connection("http://localhost:8899", "confirmed");
+  // console.log("Requesting SOL for Source Wallet...");
+  // await connection.requestAirdrop(src_keyPair.publicKey, LAMPORTS_PER_SOL * 100);
 
-  const dest_keyPair = getKeypair("wallet4");
-  const ata2_pubkey = new PublicKey("31GomYLLkwyfK9LwE92N3R8FvKoCBGr24b2n4DorBUc3");
+  const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+
+  const dest_pubkey = new PublicKey("FjJVM5knq46rr3MxSsDFNARKp6YDSqhS1DcKm6APuPyW");
+  const ata2_pubkey = new PublicKey("7Tvwrh1P7fgfJTnx9TngWwrwBXadRspmhy63L8ZxRHas");
 
 
-  const fee_ata1_pubkey = new PublicKey("GY8XNRa6SroCXmMEjfTCpFJ4HGcRaVduhySFdbUXNWgG");
+  //-- Marketing          3%
+  const fee_ata1_pubkey = new PublicKey("3ZgyamrcUybDhvuLurtwqnkFxtuXxKAEVKAeWHNfvbz1");
   const fee1 = 3
-  const fee_ata2_pubkey = new PublicKey("2MZ5tky2GPiZeMGTyFg8HXdaBb638eTYMenTQExHcBsa");
-  const fee2 = 3
-  const fee_ata3_pubkey = new PublicKey("CAyQ6MyZKkzcrkYF2BYKRJHcqSkJAiEPfZWmmMkW3AUw");
+  //-- Development        2%
+  const fee_ata2_pubkey = new PublicKey("7fmKSZ3WFJ1HsNbVRPwRezZmDQggnpmPUArsSngbcPk3");
+  const fee2 = 2
+  //-- Liquidity Pool     2%
+  const fee_ata3_pubkey = new PublicKey("GfUcEZssAT9ePfJRTkJjx9peVuduCqWW4uYheQKK9RQo");
   const fee3 = 2
-  const fee_ata4_pubkey = new PublicKey("4rKGNZ6uubxJApNVTQ5vZbMmgkZRRPT6ExfcEcBEVY8m");
+  //-- Buy Back           2%
+  const fee_ata4_pubkey = new PublicKey("8JRBBtvHBTZZ3F4KbyvA8ztyhHnJondjjhcaaHbqGj5y");
   const fee4 = 2
-  const fee_ata5_pubkey = new PublicKey("AdhKyNeuASxhmgwNVGMZnybpPfPoPdA13ZiTqzsnns6h");
+  //-- Charity            1%
+  const fee_ata5_pubkey = new PublicKey("41zm3ka3y5HVj3bY2W8ZHhn4U7cSxC53ihuXUY6hotsn");
   const fee5 = 1
   
   const transTokenIx = new TransactionInstruction({
     programId: splitProgramId,
     keys: [
       { pubkey: src_keyPair.publicKey, isSigner: true, isWritable: false },
-      { pubkey: dest_keyPair.publicKey, isSigner: false, isWritable: false },
+      { pubkey: dest_pubkey, isSigner: false, isWritable: false },
       { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
 
       { pubkey: ata1_pubkey, isSigner: false, isWritable: true },
@@ -84,7 +90,7 @@ const transToken = async () => {
   console.log("Sending Mint transaction...");
   await connection.sendTransaction(
     tx,
-    [src_keyPair, dest_keyPair],
+    [src_keyPair],
     { skipPreflight: false, preflightCommitment: "confirmed" }
   );
   

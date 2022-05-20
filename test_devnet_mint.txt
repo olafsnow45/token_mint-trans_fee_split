@@ -1,0 +1,21 @@
+
+mint auth wallet & Payer
+	pubkey : GHZ471uNz2xoQoJobKHGmPdH7oVu4YPVKzcarNzYmLNY
+	private key : 5itceqWBNbS7PjfSAXRACfBpsZLEMywspb1LWegCn7cJLWHCnLJqeyeHXmHTdHvRfzXoVKhadaKtqhTwuBygZB2k
+-----------------------------------------------------------------------
+mint token pubkey : 4yx2gD7heLLTHGLN4CGPCaGYsCRfMnadcq8nLm1aWXDk
+-----------------------------------------------------------------------
+mint auth wallet
+ata_pubkey : 7vC7aiFev4CbR7tXdF8XoAJVmsKJJkrRF8XQLv45v9hs
+-----------------------------------------------------------------------
+Wallet1_pubkey(Public) : AABNCe2Qe7ot33jf2kAfhHJ2tgzLg4RT6DfcxYz82GSq
+ATA1_pubkey : AKLskMXxyG5XLudrVuJR8rdQLNqbbFFbDwsMBXWbT5DY
+
+Wallet2_pubkey(Founders) : EAHu7zYNsK88wp14cwhpUKd2bMrt8qhcGkpVzks5FL2r
+ATA2_pubkey : CdLbsLMLwWM92eWzQp6AFR9fCn6CzygMskeA4BzCo2RB
+
+Wallet3_pubkey(Reserve) : AVgQpyz4YmnhXH3KnzSBSeaT2w7dUq1aJFumstCYKdMy
+ATA3_pubkey : CtSUc6nTFsgLQsNzyJkwczJCzkZjYtTRLRKEEbeJVu5P
+
+Wallet4_pubkey(Team) : FjJVM5knq46rr3MxSsDFNARKp6YDSqhS1DcKm6APuPyW
+ATA4_pubkey : 7Tvwrh1P7fgfJTnx9TngWwrwBXadRspmhy63L8ZxRHas
